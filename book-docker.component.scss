@@ -1,0 +1,98 @@
+div.mainCss {
+    border: solid 0.5px #ccc;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+}
+
+div.padding {
+    padding: 10px;
+}
+
+div.hiddenOverflow {
+    overflow: hidden;
+}
+
+div.ferramentas {
+    background-color: #ddd;
+    width: 100%;
+    bottom: 54px;
+    height: 48px;
+    border-radius: 0px 0px 10px 10px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+app-datagrid-footer.FooterCss {
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+div.displaydados {
+    position: absolute;
+    border: solid 0.5px #ccc;
+    background-color: white;
+    border-radius: 5px;
+    left: calc(50% - 350px);
+    top: calc(50% - 175px);
+    width: 700px;
+    height: 325px;
+    z-index: 9901;
+}
+
+div.blocoCentral {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+div.imgbook {
+    width: 250px;
+}
+
+div.imgbook img {
+    max-width: 192px;
+    max-height: 290px;
+}
+
+div.content {
+    width: 100%;
+    padding-left: 15px;
+}
+
+div.alinhamentodireito {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+}
+
+i.iclose {
+    cursor: pointer;
+    font-size: x-large;
+}
+
+div.titulo {
+    font-size: larger;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+div.descricao {
+    padding-top: 15px;
+    height: 190px;
+}
+
+button.download {
+    width: 100%;
+}

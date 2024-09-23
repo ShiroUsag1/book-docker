@@ -1,0 +1,6 @@
+<div class="mainCss" (click)="abrir()">
+    <div class="bloco">
+        <img [attr.src]="checkType(DataModel)" alt="File Icon" class="file-icon" />
+    </div>
+    <div>{{ DataModel.Titulo.substring(0,27) + (DataModel.Titulo.length > 27 ? '...' : '') }}</div>
+</div>

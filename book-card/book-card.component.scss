@@ -1,0 +1,37 @@
+div.mainCss {
+    width: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+div.mainCss:hover {
+    background-color: #777777a4;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+div.mainCss .file-icon {
+    height: 192px !important;
+    max-height: 192px !important;
+    width: 128px !important;
+    max-width: 128px !important;
+}
+
+div.bloco {
+    height: 205px;
+    max-height: 205px;
+    min-height: 205px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,59 @@
+<div class="container border border-secondary-subtle rounded-4 p-3">
+  <div class="row">
+    <div class="d-flex justify-content-center flex-wrap">
+      <app-book-card
+        [DataModel]="item"
+        *ngFor="let item of getArticles()"
+        (CallModal)="CallModal($event)"
+      ></app-book-card>
+    </div>
+    <div class="displaydados" *ngIf="showModalBook">
+      <div class="blocoCentral">
+        <div class="imgbook">
+          <img [attr.src]="getSafeUrl(this.arquivo.Capa)" alt="imgbook" />
+        </div>
+        <div class="content">
+          <div>
+              <div class="titulo">
+                  <span>{{ this.arquivo.Titulo }}</span>
+                  <i class="bi bi-x iclose" (click)="CloseDownloadModal()"></i>
+              </div>
+          </div>
+          <div>Autor: {{ this.arquivo.Autor }}</div>
+          <div>
+            Lançado em {{ this.arquivo.DataCriacao | date : "dd MMM yyyy" }}
+          </div>
+          <div class="descricao">
+            {{ this.arquivo.Descricao }}
+          </div>
+          <div>
+            <button
+              class="btn btn-primary download"
+              type="button"
+              (click)="Acessar()"
+            >
+              <i class="bi bi-cloud-download"></i>
+              Acessar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <app-datagrid-footer
+        [searchTerm]="searchTerm"
+        [qtdeMaxItens]="getMaxItens()"
+        [itemsPerPage]="itemsPerPage"
+        (setQtdeItens)="setQtdeItens($event)"
+        (setPage)="setPage($event)"
+        (calledUpdate)="updatePaginatedArticles()"
+      >
+      </app-datagrid-footer>
+    </div>
+  </div>
+  <app-form-modal
+    [arquivoInfo]="arquivo"
+    [showModal]="showModal"
+    (CloseModal)="CloseModal()"
+  ></app-form-modal>
+</div>
